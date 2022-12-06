@@ -20,7 +20,7 @@ function Todo(props) {
           props.handleComplete(props.list.id);
         }}
       >
-        {props.list.isDone ? "취소" : "완료"}
+        {props.list.Complete ? "취소" : "완료"}
       </CustomButton>
     </div>
   );

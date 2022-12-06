@@ -28,7 +28,7 @@ const App = () => {
       if (list.id === id) {
         return {
           ...list,
-          isDone: !list.isDone,
+          Complete: !list.Complete,
         };
       } else {
         return { ...list };
@@ -65,7 +65,7 @@ const App = () => {
       <div className="app-style">
         {/* app컴포넌트 안에 있는 list가 map으로 돌면서 list에 대한 정보들을 Props로 넘겨주고 있음. */}
         {lists.map((list) => {
-          if (!list.isDone) {
+          if (!list.Complete) {
             return (
               <Todo
                 handleDelete={deletelistHandler}
@@ -83,7 +83,7 @@ const App = () => {
       <div className="app-style">
         {/* app컴포넌트 안에 있는 list가 map으로 돌면서 list에 대한 정보들을 Props로 넘겨주고 있음. */}
         {lists.map((list) => {
-          if (list.isDone) {
+          if (list.Complete) {
             return (
               <Todo
                 handleDelete={deletelistHandler}
